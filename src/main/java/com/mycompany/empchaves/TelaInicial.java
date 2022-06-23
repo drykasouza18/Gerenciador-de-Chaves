@@ -1,15 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.mycompany.empchaves;
 
-import java.awt.Panel;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import javax.swing.JOptionPane;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 public class TelaInicial extends javax.swing.JFrame {
 
@@ -17,6 +11,7 @@ public class TelaInicial extends javax.swing.JFrame {
     TelaInicial ti;
     int aprovado = 0;
     String getFilial;
+    ControllerAcao ca;
 
     public TelaInicial() {
 
@@ -51,9 +46,6 @@ public class TelaInicial extends javax.swing.JFrame {
         }
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yy/MM/dd HH:mm:ss");
         this.dataehora.setText(dtf.format(LocalDateTime.now()));
-        this.cadastroemp = new JPanel();
-        cadastroemp.setVisible(false);
-
         initComponents();
 
     }
